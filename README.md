@@ -55,7 +55,13 @@ To run the other examples, `server_analysis.py` (WAT) or `word_count.py` (WET), 
 Running the code locally is made incredibly simple thanks to mrjob.
 Developing and testing your code doesn't actually need a Hadoop installation.
 
-To run the jobs locally, you can simply run:
+First, you'll need to get the relevant demo data locally, which can be done by running:
+
+    ./get-data.sh
+    
+If you're on Windows, you just need to download the files listed and place them in the appropriate folders.
+
+Once you have the data, to run the tasks locally, you can simply run:
 
     python tag_counter.py --conf-path mrjob.conf --no-output --output-dir out input/test-1.warc
     # or 'local' simulates more features of Hadoop such as counters
